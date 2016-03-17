@@ -13,7 +13,7 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 
 ' Prompt for a directory containing movies
 strDir = selectFolder("Select your movie folder:", "")
-If strDir = vbNull Then
+If strDir = "" Then
     MsgBox("Movie page creation FAILED: Movies folder not selected.")
     Wscript.Quit
  End If
@@ -55,10 +55,10 @@ Set objShell = Nothing
 
 Function selectFolder(strPrompt, strPath)
     Dim objFolder, objShell
-    selectFolder = vbNull
+    selectFolder = ""
     Set objShell = CreateObject("Shell.Application")
     Set objFolder = objShell.BrowseForFolder(0, strPrompt, 0, strPath)
-    If IsObject(objfolder) Then selectFolder = objFolder.Self.Path
+    If Not objFolder Is Nothing Then selectFolder = objFolder.Self.Path
     Set objFolder = Nothing
     Set objShell = Nothing
 End Function
