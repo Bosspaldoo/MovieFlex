@@ -41,7 +41,7 @@ The webpage is always created in the same folder as the script.
 - Movies and thumbnails must have the same name with different extensions.
 
 ## Troubleshooting
--I don't see any movie links. - Check that your movie titles don't contain any
+- I don't see any movie links - Check that your movie titles don't contain any
 unusual characters, and that your images are named the same as you movies.
 - Movie doesn't work - Most likely the movie is not actually an MP4 or M4V, or
 the browser does not support movie playback. Try using the most recent version
